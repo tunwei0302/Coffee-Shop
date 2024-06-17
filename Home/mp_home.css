@@ -1,0 +1,372 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Mooli;
+    src: url('../Fonts/Mooli-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: EB Garamond;
+    src: url('../Fonts/EBGaramond.ttf') format('truetype');
+}
+
+body{
+    width: 85%;
+    margin: auto;
+    background-color: black;
+}
+
+header{
+    background-color: black;
+    padding-right: 230px;
+    width: 100%;
+}
+
+div#logo{
+    position: relative;
+    left: 0;
+}
+
+div#logo img {
+    width: 75px;
+    height: auto;
+    border-radius: 50px;
+    float: left;
+}
+
+.logoname {
+    color: brown;
+    font-size: 20px;
+    padding-top: 25px;
+    padding-left: 15px;
+    float: left;
+}
+
+.horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+.horizontal li{
+    display: inline;
+    width: 20%;
+    background-color: black;
+    float: left;
+    text-align: center;
+}
+
+.horizontal a{
+    display: block;
+    color: black;
+    text-align: center;
+    line-height: 2.5em;
+    text-shadow: whitesmoke 1px -1px 1px;
+    transform: scale(1,1) translateY(0px);
+    transition: all 0.5s linear;
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #f1f1f1;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+    }
+} 
+
+h1 {
+    color: white;
+    font-size: 28px;
+    font-family: 'Mooli', sans-serif;
+}
+
+p {
+    color: white;
+    font-size: 15px;
+    font-family: 'EB Garamond', serif;
+}
+
+::placeholder {
+    color: #cac7ff;
+}
+
+.horizontal a:hover{
+    color: darkslateblue;
+    text-shadow: white;
+    transform: scale(2,2) translateY(-2px);
+}
+
+.icon{
+    position: relative;
+    top:5px;
+    width: 24px;
+    height: 24px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'slide'
+        'video' 
+        'schedule';
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+    grid-area: slide;
+    max-width: 1000px;
+    min-width: 200px;
+    width: 100%;
+    margin: auto;
+    
+}
+  
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: auto;
+    height: auto;
+    vertical-align: center;
+}
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev{
+    left: 175px;
+    top: 400px;
+}
+  
+/* Position the "next button" to the right */
+.next {
+    right: 175px;
+    top: 400px;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+@media (max-width: 768px) {
+    .prev{
+        left: 21px;
+        top: 400px;
+    }
+      
+    .next {
+        right: 21px;
+        top: 400px;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .mySlides img {
+        width: auto;
+        height: auto;
+        vertical-align: center;
+    }
+}
+  
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+  
+/* Number text (1/5 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: relative;
+    vertical-align: middle;
+    top: 400px;
+}
+  
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    justify-content: center;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.login img{
+    max-width: 750px;
+    width: auto;
+    max-height: 1000px;
+    height: auto;
+    text-align: center;
+}
+
+#register {
+    position: relative;
+    right: 270px;
+    bottom: 52.5px;
+    background-color: #3498db;
+    color: #fff;
+    width: 95px;
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#register:hover {
+    background-color: #27ae60;
+  }
+
+#login {
+    position: relative;
+    background-color: #3498db;
+    left: 225px;
+    bottom: 80px;
+    color: #fff;
+    width: 95px;
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login:hover {
+    background-color: #27ae60;
+}
+
+video {
+    grid-area: video;
+    display: block;
+    width: 85%;
+    margin: 20px auto;
+}
+
+table, th, td{
+    grid-area: schedule;
+    border: 1px solid peachpuff;
+    text-align: center;
+}
+
+thead{
+    background-color: rgb(221, 187, 142);
+}
+
+tr:nth-child(odd){
+    background-color: white;
+}
+
+tr:nth-child(even){
+    background-color: antiquewhite;
+}
+
+th {
+    width: 10%;
+}
+
+td {
+    width: 18%;
+}
+
+table {
+    font-size: 20px;
+}
+
+.contact-container {
+    background-color: #222; 
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'EB Garamond';
+    margin-top: 20px; 
+    border-radius: 5px; 
+}
+
+.contact-container a {
+    color: white; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+.contact-container a:hover {
+    color: #3498db; 
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9em;
+    font-family: 'Mooli';
+}

@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Mooli;
+    src: url('../Fonts/Mooli-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: EB Garamond;
+    src: url('../Fonts/EBGaramond.ttf') format('truetype');
+  }
+
+body{
+    width: 85%;
+    margin: auto;
+    background-color: black;
+}
+
+header{
+    background-color: black;
+    padding-right: 230px;
+    width: 100%;
+}
+
+div#logo{
+    position: relative;
+    left: 0;
+}
+
+div#logo img {
+    width: 75px;
+    height: auto;
+    border-radius: 50px;
+    float: left;
+}
+
+.logoname {
+    color: brown;
+    font-size: 20px;
+    padding-top: 25px;
+    padding-left: 15px;
+    float: left;
+}
+
+.horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+.horizontal li{
+    display: inline;
+    width: 20%;
+    background-color: black;
+    float: left;
+    text-align: center;
+}
+
+.horizontal a{
+    display: block;
+    color: black;
+    text-align: center;
+    line-height: 2.5em;
+    text-shadow: whitesmoke 1px -1px 1px;
+    transform: scale(1,1) translateY(0px);
+    transition: all 0.5s linear;
+}
+
+h1 {
+    color: white;
+    font-size: 30px;
+    font-family: 'Mooli', sans-serif;
+}
+
+h2 {
+    color: white;
+    font-family: 'EB Garamond';
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    font-family: 'Cookie', cursive;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Great Vibes', cursive;
+    font-family: 'Noto Serif TC', serif;
+    font-family: 'Playfair Display', serif;
+}
+
+label {
+    color: white;
+}
+
+.horizontal a:hover{
+    color: darkslateblue;
+    text-shadow: white;
+    transform: scale(2,2) translateY(-2px);
+}
+
+.icon{
+    position: relative;
+    top:5px;
+    width: 24px;
+    height: 24px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 97.5%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+fieldset {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9em;
+    font-family: 'Mooli';
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victory's Coffeehouse</title>
+    <link href="mp_reset2.css" rel="stylesheet">
+    <link href="mp_cart.css" rel="stylesheet">
+    
+</head>
+<body>
+    <script src="mp_cart.js"></script>
+
+    <header>
+        <div id="logo">
+            <img src="../Pictures/victory_coffeehouse.png" alt="victory_coffeehouse" usemap="#logo">
+            <map id="logo" name="logo">
+                <area shape="rect" coords="0, 0, 694, 242" href="../Home/mp_home.html" alt="Victory's Coffeehouse">
+            </map>
+            <p class="logoname">Victory's<br>Coffeehouse</p>
+        </div>
+    </header>
+
+        <div class="horizontal">
+            <div class="container" onclick="menuicon(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>          
+            </div>
+            <li><a href="../About Us/mp_aboutus.html">About Us</a></li>
+            <li><a href="../Menu/mp_menu.html">Menu</a></li>
+            <li><a href="../Comment/mp_comment.html">Comment</a></li>
+            <li><a href="../FAQ/mp_FAQ.html">FAQs</a></li>
+            <li><a href="../Order/mp_order.html">Order Here</a></li>
+            <li><a href="../Membership/mp_membership.html">Membership</a></li>
+            <li><a href="../Login/mp_login.html">Login</a></li>
+            <li><a href="../Cart/mp_cart.html">Cart</a></li>
+            <li><a href="../Payment/mp_payment.html">Payment</a></li>
+        </div>
+    <hr>
+    <br>
+    
+    <div class="container">
+        <header>
+            <h1>Your Shopping Cart</h1>
+            <div class="shopping">
+                <img src="../Pictures/add_to_cart.png" alt="add_to_cart">
+                <span class="quantity">0</span>    
+            </div>
+        </header>
+        <div class="list"></div>
+    </div>
+    <div class="card">
+        <h1>Card</h1>
+        <ul class="checkout">
+            <div class="total">0</div>
+            <div class="closeShoping">Close</div>
+        </ul>
+    </div>
+</body>
+
+</html>

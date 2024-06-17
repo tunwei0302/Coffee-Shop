@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+    <link href="mp_reset2.css" rel="stylesheet">
+    <link href="mp_comment.css" rel="stylesheet">
+    <script src="js/mp.comment.js"></script>
+
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="../Pictures/victory_coffeehouse.png" alt="victory_coffeehouse" usemap="#logo">
+            <map id="logo" name="logo">
+                <area shape="rect" coords="0, 0, 694, 242" href="../Home/mp_home.html" alt="Victory's Coffeehouse">
+            </map>
+            <p class="logoname">Victory's<br>Coffeehouse</p>
+        </div>
+    </header>
+
+    <div class="horizontal">
+        <div class="container" onclick="menuicon(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>          
+        </div>
+        <li><a href="../Home/mp_home.html"><img class="icon" src="../Pictures/home.png" alt="home">Home</a></li>
+        <li><a href="../Menu/mp_menu.html"><img class="icon" src="../Pictures/menu_book.png" alt="menu_book">Menu</a></li>
+        <li><a href="../About Us/mp_aboutus.html"><img class="icon" src="../Pictures/aboutusicon.png" alt="About Us">About Us</a></li>
+        <li><a href="../FAQ/mp_FAQ.html"><img class="icon" src="../Pictures/FAQ.png" alt="FAQ">FAQs</a></li>
+        <li><a href="../Membership/mp_membership.html"><img class="icon" src="../Pictures/membershipicon.png" alt="membership">Membership</a></li>
+    </div>
+    <hr>
+    <br>
+    
+    <h1><br>Customer Comments</h1>
+    <form id="commentForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" rows="3" required></textarea><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    
+    <div id="comments">
+        <h2>Comments</h2>
+        <!-- Comments will be displayed here -->
+    </div>
+
+    <script src="mp.comment.js"></script>
+
+    <footer>
+        Victory's Coffeehouse &#9749;, 21 Panda Street, &#9832;
+    </footer> 
+
+</body>
+</html>

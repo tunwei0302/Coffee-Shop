@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="mp_reset2.css" rel="stylesheet">
+    <link href="mp_menu.css" rel="stylesheet">
+    <link href="mp_login.css" rel="stylesheet">
+    
+</head>
+<body>
+    <form action="action_page.php" method="post">
+        <div class="imgcontainer">
+          <img src="../Pictures/victory_coffeehouse.png" alt="Avatar" class="avatar">
+        </div>
+      
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+      
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="" class="cancelbtn" onclick="history.go(-1)">Back</button>
+          <span class="psw"><a href="#">Forget password?</a></span>
+        </div>
+      </form>
+
+      <footer>
+        Victory's Coffeehouse &#9749;, 21 Panda Street, &#9832;
+      </footer> 
+
+</body>
+</html>

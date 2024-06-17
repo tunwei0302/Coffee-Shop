@@ -1,0 +1,385 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Mooli;
+    src: url('../Fonts/Mooli-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: EB Garamond;
+    src: url('../Fonts/EBGaramond.ttf') format('truetype');
+  }
+
+body{
+    width: 85%;
+    margin: auto;
+    background-color: black;
+}
+
+header{
+    background-color: black;
+    padding-right: 230px;
+    width: 100%;
+}
+
+div#logo{
+    position: sticky;
+    left: 0;
+}
+
+div#logo img {
+    width: 75px;
+    height: auto;
+    border-radius: 50px;
+    float: left;
+}
+
+.logoname {
+    color: brown;
+    font-size: 20px;
+    padding-top: 25px;
+    padding-left: 15px;
+    float: left;
+}
+
+.horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+.horizontal li{
+    display: inline;
+    width: 20%;
+    background-color: black;
+    float: left;
+    text-align: center;
+}
+
+.horizontal a{
+    display: block;
+    color: black;
+    text-align: center;
+    line-height: 2.5em;
+    text-shadow: whitesmoke 1px -1px 1px;
+    transform: scale(1,1) translateY(0px);
+    transition: all 0.5s linear;
+}
+
+h1 {
+    color: white;
+    font-size: 30px;
+    font-family: 'Mooli', sans-serif;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    font-family: 'EB Garamond', serif;
+}
+
+.horizontal a:hover{
+    color: darkslateblue;
+    text-shadow: white;
+    transform: scale(2,2) translateY(-2px);
+}
+
+.icon{
+    position: relative;
+    top:5px;
+    width: 24px;
+    height: 24px;
+}
+
+.menu-category{
+    color: white;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0px;
+    font-size: 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'image details'
+        'image description';
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+#grid-border {
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin: 20px;  
+}
+
+.menu-image {
+    grid-area: image;
+}
+
+.item-image {
+    width: 200px; 
+    height: auto; 
+}
+
+.menu-details {
+    grid-area: details;
+}
+
+.menu-name {
+    float: left;
+    color: white;
+}
+
+.menu-price {
+    float: right;
+    color: white;
+}
+
+.menu-description {
+    grid-area: description;
+    text-align: left;
+}
+
+.menu-cart {
+    text-align: right;
+    border-radius: 25px;
+}
+
+#cart-toggle-button {
+    position: fixed;
+    top: 60px; 
+    right: 230px; 
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#cart-toggle-button img {
+    width: 30px;
+    height: auto;
+}
+
+#cart {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transform: translateX(100%);
+    height: 100%;
+    overflow-y: auto;
+}
+
+#cart.open {
+    display: block;
+    animation: slideOut 0.5s forwards;
+}
+
+#cart.closed {
+    animation-name: slideOut;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+         transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+#cart h2 {
+    color: #333;
+    position: relative;
+    left: 170px;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+}
+
+
+
+.notification {
+    display: none;
+    position: fixed;
+    top: 56px;
+    right: 230px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 10px;
+}
+
+#cart-close-button {
+    position: absolute;
+    top: 45px;
+    left: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+#cart-close-button img {
+    width: 30px;
+    height: auto;
+}
+
+
+#manage-button, #cancel-button {
+    position: absolute;
+    top: 45px;
+    right: 180px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 20px;
+    color: blue;
+}
+
+#cancel-button {
+    display: none;
+}
+
+.cart-item-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-container img {
+    width: 100px; 
+    margin-right: 10px;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-details span {
+    margin-bottom: 5px;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-price {
+    color: green;
+}
+
+/* Style the quantity input */
+input[type="number"] {
+    position: relative;
+    left: 80px;
+    top: -26.5px;
+    width: 40px; 
+    padding: 5px; 
+    border: none;
+    color: blue; 
+    background: none;
+}
+
+#remove-sumbit-button-container {
+    position: absolute;
+    right: 175px;
+    margin-top: 20px;
+}
+
+#remove-selected-button {
+    display: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px; 
+    border-radius: 5px;
+}
+
+#remove-selected-button:hover {
+    background-color: darkred;
+}
+
+.manage-mode #remove-selected-button {
+    display: inline-block;
+}
+
+#submit-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: lightgreen;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px; 
+    border-radius: 5px;
+}
+
+#submit-button:hover {
+    background-color: darkgreen;
+}
+
+.checkbox {
+    position: relative;
+    top: 30px;    
+    left: 19.5px;
+}
+
+.item-subtotal {
+    position: relative;
+    left: 150px;
+    top: 50px;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#total{
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9em;
+    font-family: 'Mooli';
+}

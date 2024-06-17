@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link href="mp_reset2.css" rel="stylesheet">
+    <link href="mp_FAQ.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="../Pictures/victory_coffeehouse.png" alt="victory_coffeehouse" usemap="#logo">
+            <map id="logo" name="logo">
+                <area shape="rect" coords="0, 0, 694, 242" href="mp_home.html" alt="Victory's Coffeehouse">
+            </map>
+            <p class="logoname">Victory's<br>Coffeehouse</p>
+        </div>
+    </header>
+
+    <div class="horizontal">
+        <div class="container" onclick="menuicon(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>          
+        </div>
+        <li><a href="../Home/mp_home.html"><img class="icon" src="../Pictures/home.png" alt="home">Home</a></li>
+        <li><a href="../Menu/mp_menu.html"><img class="icon" src="../Pictures/menu_book.png" alt="menu_book">Menu</a></li>
+        <li><a href="../About Us/mp_aboutus.html"><img class="icon" src="../Pictures/aboutusicon.png" alt="About Us">About Us</a></li>
+        <li><a href="../Comment/mp_comment.html"><img class="icon" src="../Pictures/comment.png" alt="comment">Comment</a></li>
+        <li><a href="../Membership/mp_membership.html"><img class="icon" src="../Pictures/membershipicon.png" alt="membership">Membership</a></li>
+    </div>
+    <hr>
+    <br>
+    <h1><br>Frequently Asked Questions</h1>
+
+    <div class="faq" id="faq-border">
+        <div class="question">Where are you located? </div>
+        <div class="answer">We are located at 21 Panda Street, on the Southwest corner on the same intersection as the Royal Oak Music Theater</div>
+    </div>
+
+    <div class="faq" id="faq-border">
+        <div class="question">What is your working hours?</div>
+        <div class="answer">We are opening from 9 a.m. to 9 p.m. on weekdays, rest between 12 p.m. to 1:30 p.m. and 6 p.m. to 7 p.m.. On Saturday, we are opening from 9 a.m. to 6 p.m., and rest on 12 p.m. to 1:30 p.m. . We are closing on Sunday.</div>
+    </div>
+
+    <div class="faq" id="faq-border">
+        <div class="question">What kind of coffee do you serve?</div>
+        <div class="answer">We serve Americano, Cappuccino, Espresso, Latte, Macchiato, Mocha.</div>
+    </div>
+
+    <div class="faq" id="faq-border">
+        <div class="question">Do you have free Wi-Fi?</div>
+        <div class="answer">Yes, we have Wi-Fi and it is free. Members just get preferred access (it’s faster) </div>
+    </div>
+
+    <div class="faq" id="faq-border">
+        <div class="question">What kind of food do you serve?  </div>
+        <div class="answer">We serve Chocolate Whipped Cream Cake, Matcha Cream Roll, Tiramisu Cake, Matcha Tiramisu Cake. </div>
+    </div>
+
+    <div class="faq" id="faq-border">
+        <div class="question">Do you offer barista training courses?  </div>
+        <div class="answer">No, we are only selling coffee and side dishes.</div>
+    </div>
+
+    <div class="faq" id="faq-border">
+        <div class="question">Can I return my order? </div>
+        <div class="answer">Our coffeehouses doesn't accept return once payment was made.</div>
+    </div>
+
+    <div class="faq" id="faq-border">
+        <div class="question">What makes your coffee “specialty coffee”? </div>
+        <div class="answer">Victory's Coffeehouse defines specialty coffee as being free from primary defects. It is properly sized, dried, and it presents in a cup free of faults and taints. It also has distinctive attributes, meaning it must be able to pass aspect grading and cupping tests.</div>
+    </div>
+
+    <script>
+        // JavaScript to toggle the display of answers
+        const questions = document.querySelectorAll('.question');
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+
+<footer>
+    Victory's Coffeehouse &#9749;, 21 Panda Street, &#9832;
+</footer> 
+
+</body>
+</html>

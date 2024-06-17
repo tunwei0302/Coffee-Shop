@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="mp_payment.css">
+</head>
+<body>
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-50">
+                            <h3>Payment</h3>
+                            <label for="name">Accepted Cards</label>
+                            <div class="icon-container">
+                                <img src="../Pictures/visa.jpg" alt="visa">
+                                <img src="../Pictures/american_express.jpg" alt="american express">
+                                <img src="../Pictures/mastercard.jpg" alt="mastercard">
+                                <img src="../Pictures/discover.jpg" alt="discover">
+                            </div>
+                            <label for="cname">Name On Card:</label>
+                            <input type="text" id="cname" name="cardname" placeholder="Your Name In Card" required>
+                            <label for="cardnum">Card Number:</label>
+                            <input type="text" id="cardnum" name="cardnumber" placeholder="xxxx-xxxx-xxxx-xxxx" required>
+                            <label for="expmonth">Exp Month</label>
+                            <input type="text" id="expmonth" name="expmonth" placeholder="September" required>
+
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="expyear">Exp Year</label>
+                                    <input type="text" id="expyear" name="expyear" placeholder="2023" required>
+                                    
+                                </div>
+                                <div class="col-50">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="352" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <label>
+                        <input type="checkbox" checked="checked" name="sameaddress">Shipping adress same as billing
+                    </label>
+                    <input type="button" value="Submit Your Payment" class="btn" onclick="showCustomNotification()">
+                    <div id="sumbitNotification" class="custom-notification">
+                        <p id="sumbitText">Thank you for your order! You will be redirected to another page shortly.</p>
+                        <div id="countdownsumbit"></div>
+                    </div>
+                    <input type="button" value="Back To Menu" class="backbtn" onclick="showCancelNotification()">
+                    <div id="cancelNotification" class="custom-notification">
+                        <p id="cancelText">Are you sure to cancel your order?</p>
+                        <button onclick="cancelOrder()">Yes</button>
+                        <button onclick="hideCancelNotification()">No</button>
+                        <p id="backToMenuText">Order canceled. Returning to the menu.</p>
+                        <div id="countdowncancel"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="mp_payment.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link href="mp_reset2.css" rel="stylesheet">
+    <link href="mp_menu.css" rel="stylesheet">
+    <script src="mp_menu.js"></script>
+
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="../Pictures/victory_coffeehouse.png" alt="victory_coffeehouse" usemap="#logo">
+            <map id="logo">
+                <area shape="rect" coords="0, 0, 694, 242" href="../Home/mp_home.html" alt="Victory's Coffeehouse">
+            </map>
+            <p class="logoname">Victory's<br>Coffeehouse</p>
+        </div>
+    </header>
+
+    <div class="horizontal">
+        <div class="container" onclick="menuicon(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>          
+        </div>
+        <li><a href="../Home/mp_home.html"><img class="icon" src="../Pictures/home.png" alt="home">Home</a></li>
+        <li><a href="../About Us/mp_aboutus.html"><img class="icon" src="../Pictures/aboutusicon.png" alt="About Us">About Us</a></li>
+        <li><a href="../Comment/mp_comment.html"><img class="icon" src="../Pictures/comment.png" alt="comment">Comment</a></li>
+        <li><a href="../FAQ/mp_FAQ.html"><img class="icon" src="../Pictures/FAQ.png" alt="faq">FAQs</a></li>
+        <li><a href="../Membership/mp_membership.html"><img class="icon" src="../Pictures/membershipicon.png" alt="membership">Membership</a></li>
+    </div>
+
+    <hr>
+    <br>
+    
+    <button id="cart-toggle-button" onclick="toggleCart()">
+        <img src="../Pictures/shopping_bag.png" alt="Toggle Cart" />
+    </button>
+    <div id="notification" class="notification">
+        <span id="notification-message">0</span>
+    </div>
+           
+
+    <h1><br>Our Menu</h1><br>
+    <p>Explore our delicious coffee and food offerrings</p>
+    <h2 class="menu-category">Drink</h2>
+    <div class="grid-container" id="grid-border">
+        <div class="menu-image">
+            <img class="item-image" src="../Pictures/americano.png" alt="americano">
+        </div>
+        <div class="menu-details">
+            <div class="menu-name">
+                <h2>Americano</h2>
+            </div>
+            <div class="menu-price">
+                <h3>RM9.00</h3>
+            </div>
+        </div>
+        <div class="menu-description" >
+            <p>A simple coffee made by diluting a shot of espresso with hot water, resulting in a milder and larger cup of coffee.</p>        
+            <div class="menu-cart">
+            <input type="submit" value="Add to cart" onclick="addToCart('Americano', '9.00', '../Pictures/americano.png')">
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container" id="grid-border">
+        <div class="menu-image">
+            <img class="item-image" src="../Pictures/cappuccino.png" alt="cappuccino">
+        </div>
+        <div class="menu-details">
+            <div class="menu-name">
+                <h2>Cappuccino</h2>
+            </div>
+            <div class="menu-price">
+                <h3>RM9.00</h3>
+            </div>
+        </div>
+        <div class="menu-description">
+            <p>A simple coffee made by diluting a shot of espresso with hot water, resulting in a milder and larger cup of coffee.</p>        
+            <div class="menu-cart">
+            <input type="submit" value="Add to cart" onclick="addToCart('Cappuccino', '9.00', '../Pictures/cappuccino.png')">
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container" id="grid-border">
+        <div class="menu-image">
+            <img class="item-image" src="../Pictures/espresso.png" alt="espresso">
+        </div>
+        <div class="menu-details">
+            <div class="menu-name">
+                <h2>Espresso</h2>
+            </div>
+            <div class="menu-price">
+                <h3>RM9.00</h3>
+            </div>
+        </div>
+        <div class="menu-description">
+            <p>A strong and concentrated coffee made by forcing hot water through finely-ground coffee beans, offering a bold and intense flavor.</p>        
+            <div class="menu-cart">
+            <input type="submit" value="Add to cart" onclick="addToCart('Espresso', '9.00', '../Pictures/espresso.png')">
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container" id="grid-border">
+        <div class="menu-image">
+            <img class="item-image" src="../Pictures/latte.png" alt="latte">
+        </div>
+        <div class="menu-details">
+            <div class="menu-name">
+                <h2>Latte</h2>
+            </div>
+            <div class="menu-price">
+                <h3>RM9.00</h3>
+            </div>
+        </div>
+        <div class="menu-description">
+            <p>A smooth and milky coffee composed of espresso and steamed milk, typically topped with a small amount of milk foam.</p>        
+            <div class="menu-cart">
+            <input type="submit" value="Add to cart" onclick="addToCart('Latte', '9.00', '../Pictures/latte.png')">
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container" id="grid-border">
+        <div class="menu-image">
+            <img class="item-image" src="../Pictures/macchiato.png" alt="macchiato">
+        </div>
+        <div class="menu-details">
+            <div class="menu-name">
+                <h2>Macchiato</h2>
+            </div>
+            <div class="menu-price">
+                <h3>RM9.00</h3>
+            </div>
+        </div>
+        <div class="menu-description">
+            <p>An espresso "stained" or "marked" with a small amount of frothy milk, delivering a strong coffee flavor with a touch of creaminess.</p>        
+            <div class="menu-cart">
+            <input type="submit" value="Add to cart" onclick="addToCart('Macchiato', '9.00', '../Pictures/macchiato.png')">
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container" id="grid-border">
+        <div class="menu-image">
+            <img class="item-image" src="../Pictures/mocha.png" alt="mocha">
+        </div>
+        <div class="menu-details">
+            <div class="menu-name">
+                <h2>Mocha</h2>
+            </div>
+            <div class="menu-price">
+                <h3>RM9.00</h3>
+            </div>
+        </div>
+        <div class="menu-description">
+            <p>A delightful blend of espresso, steamed milk, and chocolate, creating a sweet and indulgent coffee experience reminiscent of hot cocoa.</p>        
+            <div class="menu-cart">
+            <input type="submit" value="Add to cart" onclick="addToCart('Mocha', '9.00', '../Pictures/mocha.png')">
+            </div>
+        </div>
+    </div>
+
+    <h2 class="menu-category">Desert</h2>
+    <div class="grid-container" id="grid-border">
+        <div class="menu-image">
+            <img class="item-image" src="../Pictures/chocolate-whipped-cream-cake.jpg" alt="chocolate-whipped-cream-cake">
+        </div>
+        <div class="menu-details">
+            <div class="menu-name">
+                <h2>Chocolate Whipped Cream Cake</h2>
+            </div>
+            <div class="menu-price">
+                <h3>RM10.00</h3>
+            </div>
+        </div>
+        <div class="menu-description">
+            <p>A sweet cake composed of sweetened whipped cream and light chocolate sandwiched together.</p>        
+            <div class="menu-cart">
+            <input type="submit" value="Add to cart" onclick="addToCart('Chocolate Whipped Cream Cake', '10.00', '../Pictures/chocolate-whipped-cream-cake.jpg')">
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container" id="grid-border">
+        <div class="menu-image">
+            <img class="item-image" src="../Pictures/matcha_cream_roll.jpg" alt="matcha_cream_roll">
+        </div>
+        <div class="menu-details">
+            <div class="menu-name">
+                <h2>Matcha Cream Roll</h2>
+            </div>
+            <div class="menu-price">
+                <h3>RM10.00</h3>
+            </div>
+        </div>
+        <div class="menu-description">
+            <p>A fluffy sponge cake filled with swirls of fresh matcha cream.  Light, creamy and slightly sweet, it makes a delicious afternoon tea or after-dinner dessert that can be <br>enjoyed with coffee or tea.</p>        
+            <div class="menu-cart">
+            <input type="submit" value="Add to cart" onclick="addToCart('Matcha Cream Roll', '10.00', '../Pictures/matcha_cream_roll.jpg')">
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container" id="grid-border">
+        <div class="menu-image">
+            <img class="item-image" src="../Pictures/tiramisu.jpg" alt="tiramisu">
+        </div>
+        <div class="menu-details">
+            <div class="menu-name">
+                <h2>Tiramisu Cake</h2>
+            </div>
+            <div class="menu-price">
+                <h3>RM10.00</h3>
+            </div>
+        </div>
+        <div class="menu-description">
+            <p>A classic Italian layered dessert with rum-flavored, coffee-soaked ladyfingers, a creamy mascarpone custard, and whipped cream.</p>        
+            <div class="menu-cart">
+            <input type="submit" value="Add to cart" onclick="addToCart('Tiramisu Cake', '10.00', '../Pictures/tiramisu.jpg')">
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container" id="grid-border">
+        <div class="menu-image">
+            <img class="item-image" src="../Pictures/matcha_tiramisu.jpg" alt="matcha_tiramisu">
+        </div>
+        <div class="menu-details">
+            <div class="menu-name">
+                <h2>Matcha Tiramisu Cake</h2>
+            </div>
+            <div class="menu-price">
+                <h3>RM10.00</h3>
+            </div>
+        </div>
+        <div class="menu-description">
+            <p>A delicious twist on the classic Italian dessert, with layers of creamy matcha mascarpone cream and soft, spongy finger cookies soaked in matcha. It's all mixed with<br> plenty of green tea flavor.</p>        
+            <div class="menu-cart">
+                <input type="submit" value="Add to cart" onclick="addToCart('Matcha Tiramisu Cake', '10.00', '../Pictures/matcha_tiramisu.jpg')">
+            </div>
+        </div>
+    </div>
+
+    <div id="cart">
+        <button id="cart-close-button" onclick="toggleCart()">
+            <img src="../Pictures/close_button.png" alt="Close Cart" />
+        </button>
+        <h2>My Cart</h2>
+        <button id="manage-button" onclick="toggleManageMode()">Manage</button>
+        <button id="cancel-button" onclick="toggleManageMode()">Cancel</button>
+        <span class="item-subtotal"></span>
+        <ul id="cart-items"></ul>
+         <!-- The image, name, price, and quantity will be inside a container div -->
+        <div class="cart-item-container">
+            <span class="item-name"></span>
+            <span class="item-quantity"></span>
+        </div>
+        <div id="total"></div>
+        <div id="remove-sumbit-button-container">
+            <button id="submit-button" onclick="toAnotherWebpages()">Sumbit</button>
+            <button id="remove-selected-button" onclick="removeSelectedItems()">Remove</button>
+        </div>
+    </div>
+    
+</body>
+
+<footer>
+    Victory's Coffeehouse &#9749;, 21 Panda Street, &#9832;
+</footer> 
+
+</html>

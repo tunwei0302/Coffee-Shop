@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Mooli;
+    src: url('../Fonts/Mooli-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: EB Garamond;
+    src: url('../Fonts/EBGaramond.ttf') format('truetype');
+  }
+
+body{
+    width: 85%;
+    margin: auto;
+    background-color: black;
+}
+
+header{
+    background-color: black;
+    padding-right: 230px;
+    width: 100%;
+}
+
+div#logo{
+    position: relative;
+    left: 0;
+}
+
+div#logo img {
+    width: 75px;
+    height: auto;
+    border-radius: 50px;
+    float: left;
+}
+
+.logoname {
+    color: brown;
+    font-size: 20px;
+    padding-top: 25px;
+    padding-left: 15px;
+    float: left;
+}
+
+.horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+.horizontal li{
+    display: inline;
+    width: 20%;
+    background-color: black;
+    float: left;
+    text-align: center;
+}
+
+.horizontal a{
+    display: block;
+    color: black;
+    text-align: center;
+    line-height: 2.5em;
+    text-shadow: whitesmoke 1px -1px 1px;
+    transform: scale(1,1) translateY(0px);
+    transition: all 0.5s linear;
+}
+
+.icon{
+    position: relative;
+    top:5px;
+    width: 24px;
+    height: 24px;
+}
+
+h1 {
+    font-size: 28px;
+    color: black; 
+    margin-bottom: 10px;
+    font-family: 'Mooli', sans-serif;
+}
+
+
+h2 {
+    color: white;
+    font-size: 25px;
+    font-family: 'EB Garamond';
+}
+
+li {
+    color: black ;
+    font-size: 20px;
+    font-family: 'EB Garamond';
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #555;
+    font-family: 'EB Garamond';
+}
+
+label {
+    color: black;
+}
+
+p {
+    color: black;
+    font-size: 20px;
+    font-family: 'EB Garamond';
+}
+
+::placeholder {
+    color: #cac7ff;
+}
+
+.horizontal a:hover{
+    color: darkslateblue;
+    text-shadow: white;
+    transform: scale(2,2) translateY(-2px);
+}
+.prev{
+    left: 440px;
+    top: 350px;
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.section-box {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: silver;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9em;
+    font-family: 'Mooli';
+}

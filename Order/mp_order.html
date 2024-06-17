@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link href="mp_reset2.css" rel="stylesheet">
+    <link href="mp_order.css" rel="stylesheet">
+    <script src="mp_order.js"></script>
+
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="../Pictures/victory_coffeehouse.png" alt="victory_coffeehouse" usemap="#logo">
+            <map id="logo" name="logo">
+                <area shape="rect" coords="0, 0, 694, 242" href="../Home/mp_home.html" alt="Victory's Coffeehouse">
+            </map>
+            <p class="logoname">Victory's<br>Coffeehouse</p>
+        </div>
+    </header>
+
+        <div class="horizontal">
+            <li><a href="../Home/mp_home.html"><img class="icon" src="../Pictures/home.png" alt="home">Home</a></li>
+            <li><a href="../About Us/mp_aboutus.html"><img class="icon" src="../Pictures/aboutusicon.png" alt="About Us">About Us</a></li>
+            <li><a href="../Comment/mp_comment.html"><img class="icon" src="../Pictures/comment.png" alt="comment">Comment</a></li>
+            <li><a href="../FAQ/mp_FAQ.html"><img class="icon" src="../Pictures/FAQ.png" alt="faq">FAQs</a></li>
+            <li><a href="../Login/mp_login.html"><img class="icon" src="../Pictures/login.jpg" alt="login">Login</a></li>
+        </div>
+    <hr>
+    <br>
+
+    <h1><br>Customer Informations</h1>
+
+    <p>Thank you for using our online ordering form for quick and easy orders. Please enter your
+        name and phone number, email and whether you want to place an order for delivery or pickup. 
+        Note that required values are marked by an asterisk (*). If you want to place your 
+        order over the phone, call us at <a href="tel +60123456789">+(60) 12-3456789</a>.
+        <br><br>
+        *Note: We will charge some deliver fees depends on how far the adress you give if you choose delivery.
+    </p>
+    
+    <form action="http://www.example.com/victory'scoffeehouse/orderonline" method="post">
+        <section>
+            <h2><u>Customer Information</u></h2>
+            <div>
+                <label for="custName">Name<span>*</span></label>
+                <input type="text" id="custName" name="custName" placeholder="Full Name" required>
+            </div>
+            <div>
+                <label for="custPhone">Phone<span>*</span></label>
+                <input type="tel" id="custPhone" name="custPhone" placeholder="(+60)## - ### ####" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required>
+            </div>
+            <div>
+                <label for="custEmail">Email<span>*</span></label>
+                <input type="email" id="custEmail" name="custEmail" placeholder="you@example.com" required>
+            </div>
+        </section>
+    
+        <section>
+            <h2><u>Order Type</u></h2>
+            <div>
+                <input type="radio" id="delivery" name="orderType" checked>
+                <label for="delivery">Delivery</label>
+                <input type="radio" id="pickup" name="orderType">
+                <label for="pickup">Pickup</label>
+            </div>
+    
+            <fieldset id="deliveryInfo">
+                <legend>Delivery Info</legend>
+                <textarea id="homeAddress" name="homeAddress" placeholder="Please Enter Your Home Address"></textarea>
+                <div>
+                    <label for="delTime">Delivery Time (leave blank for the earliest delivery)</label>
+                    <input type="text" id="delTime" name="delTime">
+                </div>
+            </fieldset>
+    
+            <fieldset id="pickupInfo">
+                <legend>Pickup Info</legend>
+                <label for="pickupTime">Pickup Time (leave blank for earliest pickup)</label>
+                <input type="time" id="pickupTime" name="pickupTime" disabled>
+            </fieldset>
+        </section>
+    
+        <div>
+            <input type="submit" value="Submit Your Order" onclick="submitorder()">
+        </div>
+    </form>
+    <br>
+
+    <footer>
+        Victory's Coffeehouse &#9749;, 21 Panda Street, &#9832;
+    </footer> 
+</body>
+</html>
+
+
